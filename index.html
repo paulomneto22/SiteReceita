@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#17130f">
+  <meta name="description" content="Descubra receitas incríveis, encontre inspiração e transforme ingredientes em momentos especiais.">
+  <title>Saborê — Descubra seu próximo prato favorito</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="announcement">
+    <span class="announcement-dot"></span>
+    <span>Uma pitada de inspiração muda tudo.</span>
+    <a href="#explorar">Encontre sua próxima receita <span aria-hidden="true">↗</span></a>
+  </div>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navegação principal">
+      <a class="brand" href="#" aria-label="Saborê, página inicial">
+        <span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 30V18c0-5 3-8 8-8s8 3 8 8v12M9 30h22M16 8c-2-2 0-4 1-5M23 7c-2-2 0-4 1-5"/></svg></span>
+        <span class="brand-name">sabor<span>ê</span><small>COZINHA COM ALMA</small></span>
+      </a>
+      <div class="nav-links">
+        <a href="#explorar">Explorar</a>
+        <a href="#colecoes">Inspiração</a>
+        <a href="#sobre">Nossa ideia</a>
+      </div>
+      <a class="nav-cta" href="#buscador">Encontrar receita <span>↗</span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"><span></span><span></span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-grain" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
+      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
+      <div class="hero-inner container">
+        <div class="hero-copy">
+          <div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> SEU PRÓXIMO CAPÍTULO NA COZINHA</div>
+          <h1>Tem dias que<br>pedem <em>algo</em><br><span>delicioso.</span></h1>
+          <p class="hero-description">Do ingrediente que já está na geladeira à receita que você nunca imaginou. A inspiração começa aqui.</p>
+          <div class="hero-actions">
+            <a class="button button-yellow" href="#buscador">Encontrar minha receita <span>↗</span></a>
+            <button class="button button-ghost" id="heroRandom"><span class="sparkle">✳</span> Me surpreenda</button>
+          </div>
+          <div class="hero-proof">
+            <div class="proof-avatars" aria-hidden="true"><span>🍅</span><span>🥑</span><span>🍋</span></div>
+            <div><strong>Inspiração sem fim</strong><small>Receitas do mundo todo, ao seu alcance.</small></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img class="hero-photo" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=90" alt="Prato colorido com ingredientes frescos" fetchpriority="high">
+            <div class="image-overlay"></div>
+            <div class="floating-note note-top"><span class="note-icon">✦</span><span><strong>Feito para descobrir</strong><small>Seu próximo favorito</small></span></div>
+            <div class="floating-note note-bottom"><span class="note-emoji">🥬</span><span><strong>Comece pelo que tem</strong><small>Ingredientes viram ideias</small></span></div>
+          </div>
+          <div class="hero-stamp" aria-hidden="true"><span>FEITO COM</span><strong>♥</strong><span>APETITE</span></div>
+          <div class="hero-index"><span>01</span><i></i><span>INSPIRAÇÃO DIÁRIA</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><span>BOAS IDEIAS COMEÇAM NA COZINHA</span><span class="hero-bottom-right">ROLE PARA DESCOBRIR <span>↓</span></span></div>
+    </section>
+
+    <section class="search-section section-space" id="buscador">
+      <div class="container">
+        <div class="section-heading search-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> VAMOS DESCOBRIR</div><h2>O que combina<br>com o seu <em>momento?</em></h2></div>
+          <p>Conte o que deu vontade ou o que você tem por aí. A gente procura uma ideia gostosa para você.</p>
+        </div>
+        <form class="search-panel" id="formBusca">
+          <div class="search-panel-top">
+            <div class="search-label"><span class="search-label-icon">⌕</span><label for="pesquisa">Sua próxima receita começa com...</label></div>
+            <span class="live-pill"><span></span> BUSCA AO VIVO</span>
+          </div>
+          <div class="search-main">
+            <div class="input-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.2 4.2"></path></svg><input id="pesquisa" type="search" placeholder="Experimente “frango cremoso” ou “batata”..." autocomplete="off" aria-label="Digite uma receita ou ingrediente"></div>
+            <button class="button button-primary" type="submit">Buscar receitas <span>↗</span></button>
+          </div>
+          <div class="search-options">
+            <span class="options-title">QUERO BUSCAR POR</span>
+            <label class="choice"><input type="radio" name="tipoBusca" value="nome" checked><span class="choice-dot"></span> Nome do prato</label>
+            <label class="choice"><input type="radio" name="tipoBusca" value="ingrediente"><span class="choice-dot"></span> Ingrediente</label>
+            <span class="options-divider"></span>
+            <span class="popular-label">POPULARES:</span>
+            <button type="button" class="quick-chip" data-termo="frango">Frango</button>
+            <button type="button" class="quick-chip" data-termo="bolo">Bolo</button>
+            <button type="button" class="quick-chip" data-termo="macarrão">Macarrão</button>
+            <button type="button" class="quick-chip" data-termo="batata">Batata</button>
+          </div>
+        </form>
+        <div class="surprise-strip">
+          <div class="surprise-symbol">✳</div>
+          <div class="surprise-copy"><strong>Hoje você não escolhe. A inspiração escolhe por você.</strong><span>Descubra um prato aleatório e saia da rotina.</span></div>
+          <button type="button" class="button button-dark" id="botaoAleatoria">Me surpreenda <span>↗</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="results-section section-space" id="explorar">
+      <div class="container">
+        <div class="results-top">
+          <div class="section-heading compact-heading">
+            <div class="eyebrow"><span class="eyebrow-line"></span> UMA MESA DE POSSIBILIDADES</div>
+            <h2 id="tituloResultados">Ideias que dão <em>água na boca.</em></h2>
+          </div>
+          <div class="results-meta"><span class="results-count" id="contador">PRONTO PARA EXPLORAR</span><span class="results-decoration">✳</span></div>
+        </div>
+        <div id="mensagem" class="state-panel" role="status" aria-live="polite">
+          <div class="state-art"><span>✳</span><i>✦</i><b>♥</b></div>
+          <p class="state-kicker">SUA COZINHA, NOVAS POSSIBILIDADES</p>
+          <h3>Uma boa receita muda o dia.</h3>
+          <p>Pesquise um ingrediente ou prato em português e descubra onde a vontade vai te levar.</p>
+          <button class="text-action" type="button" id="stateSearch">Começar a explorar <span>↗</span></button>
+        </div>
+        <div id="listaReceitas" class="recipe-grid"></div>
+        <div class="results-footnote"><span class="footnote-star">✳</span> Receitas e imagens fornecidas pela TheMealDB. Traduções automáticas podem precisar de revisão.</div>
+      </div>
+    </section>
+
+    <section class="collections-section section-space" id="colecoes">
+      <div class="container">
+        <div class="section-heading collection-heading">
+          <div><div class="eyebrow"><span class="eyebrow-line"></span> UM POUCO DE INSPIRAÇÃO</div><h2>Cozinhar também é<br><em>sentir curiosidade.</em></h2></div>
+          <p>Às vezes, tudo o que falta é uma ideia nova. Escolha um caminho e deixe o apetite guiar.</p>
+        </div>
+        <div class="collection-grid">
+          <button class="collection-card collection-orange" data-termo="chicken" data-busca="ingrediente" type="button"><span class="collection-number">01 / PRÁTICO</span><span class="collection-icon">♨</span><strong>Algo fácil<br>e gostoso.</strong><span class="collection-bottom">IDEIAS PARA O DIA A DIA <b>↗</b></span></button>
+          <button class="collection-card collection-green" data-termo="vegetarian" data-busca="nome" type="button"><span class="collection-number">02 / FRESCO</span><span class="collection-icon">❋</span><strong>Mais verde<br>no prato.</strong><span class="collection-bottom">UM JEITO FRESCO DE COMER <b>↗</b></span></button>
+          <button class="collection-card collection-yellow" data-termo="cake" data-busca="nome" type="button"><span class="collection-number">03 / CARINHO</span><span class="collection-icon">♡</span><strong>Um doce<br>momento.</strong><span class="collection-bottom">PEQUENAS ALEGRIAS <b>↗</b></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto-section" id="sobre">
+      <div class="container manifesto-inner">
+        <div class="manifesto-mark">“</div>
+        <div class="manifesto-copy"><div class="eyebrow eyebrow-light"><span class="eyebrow-line"></span> UM LEMBRETE SABORÊ</div><h2>Não precisa ser<br>perfeito. Só precisa<br>ter <em>um pouco de amor.</em></h2><p>A cozinha é feita de tentativas, descobertas e histórias que começam com “vamos experimentar?”.</p></div>
+        <div class="manifesto-image"><img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=85" alt="Preparação de alimentos em uma cozinha iluminada" loading="lazy"><span>O ingrediente secreto<br>é se permitir tentar.</span></div>
+      </div>
+    </section>
+
+    <section class="closing-cta">
+      <div class="container closing-inner"><div><span class="eyebrow"><span class="eyebrow-line"></span> SUA PRÓXIMA DESCOBERTA ESTÁ PERTO</span><h2>Abriu o apetite?<br><em>Vamos nessa.</em></h2></div><a href="#buscador" class="button button-yellow">Encontrar uma receita <span>↗</span></a><div class="closing-doodle" aria-hidden="true">✳</div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-main">
+      <a class="brand footer-brand" href="#"><span class="brand-mark"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M12 30V18c0-5 3-8 8-8s8 3 8 8v12M9 30h22M16 8c-2-2 0-4 1-5M23 7c-2-2 0-4 1-5"/></svg></span><span class="brand-name">sabor<span>ê</span><small>COZINHA COM ALMA</small></span></a>
+      <p>Feito para quem acredita que cozinhar<br>é uma forma de carinho.</p>
+      <a href="#buscador" class="footer-link">ENCONTRE SUA RECEITA <span>↗</span></a>
+    </div>
+    <div class="container footer-bottom"><span>© 2026 SABORÊ — PROJETO EDUCACIONAL</span><span>FEITO COM CURIOSIDADE <b>♥</b></span></div>
+  </footer>
+
+  <div class="modal" id="modalReceita" aria-hidden="true">
+    <div class="modal-backdrop" data-fechar-modal></div>
+    <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+      <button type="button" class="modal-close" id="fecharModal" aria-label="Fechar detalhes">×</button>
+      <div id="detalhesReceita"></div>
+    </section>
+  </div>
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+</body>
+</html>
